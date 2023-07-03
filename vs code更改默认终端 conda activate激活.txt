@@ -1,0 +1,27 @@
+vs code更改默认终端 conda activate激活
+
+蓬举举
+
+缘起：今天想尝试在vs code中使用python，出现了几行warning，大意是conda无法激活。
+
+总结经验：
+
+Anaconda可以看作是一个虚拟机，我们的python环境使用的不是本机，而是Anaconda中的环境。
+
+虽然Windows的电脑上并没有安装python解释器，但是在写python程序的时候选择Anaconda环境，一样可以随心所欲的使用python。
+
+我们需要在vs code中使用激活Anaconda环境来使用python。
+
+输入conda activate base之后没有任何反应，在网上查阅了许多资料＋不断更正自己的搜索关键词后终于发现了一个比较关键的帖子。
+
+解决使用anaconda VSCODE无法import cv2问题
+
+这个问题是由于anaconda 多环境导致的 ,默认VSCode里的默认终端是powershell,但是powershell不能执行conda activate,所以Python无法切换到需要的环境。
+
+解决办法：
+
+输入：Ctrl+Shift+P
+
+输入：terminal:select default profile
+
+将默认的PS改为cmd
